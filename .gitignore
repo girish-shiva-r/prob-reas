@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+data/
+kb_hybrid/
+kb/wiki_cache.jsonl
+*.bak
+*part*of*.jsonl
+*.zip
+*.docx
+*.pptx
+*.pdf
+.env

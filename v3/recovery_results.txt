@@ -1,0 +1,29 @@
+truth differs from the hand-set guesses by 0.085 (mean |difference| per table entry), action effects by 0.058
+
+setting                                        table err cause acc  log-loss   agree  regret  effects
+-----------------------------------------------------------------------------------------------------
+TRUE numbers (best possible)                       0.000     97.6%    0.4773  100.0%   0.000    0.000
+hand-set guesses, no learning                      0.085     96.0%    0.5645   70.8%   0.061    0.058
+-- weak cause labels on 0% of rows (8000 training questions) --
+   alpha 0.0   hand-set start   ( 56 it)           0.152     97.5%    0.4878   94.0%   0.005    0.048
+   alpha 0.0   random start     (150 it)           0.379     38.1%    0.4904   79.5%   0.036    0.215
+   alpha 5.0   hand-set start   ( 54 it)           0.053     97.5%    0.4805   96.0%   0.002    0.045
+   alpha 5.0   random start     (150 it)           0.202     50.5%    0.4923   80.5%   0.037    0.150
+   alpha 50.0  hand-set start   ( 28 it)           0.057     97.5%    0.4813   95.5%   0.003    0.047
+   alpha 50.0  random start     (150 it)           0.131     56.1%    0.4977   87.0%   0.031    0.158
+   PIPELINE: alpha by CV = 20.0 + 4 restarts       0.054     97.5%    0.4804   96.2%   0.002    0.046
+      distance between restarts: 0.1224
+-- weak cause labels on 30% of rows (8000 training questions) --
+   alpha 0.0   hand-set start   ( 34 it)           0.141     97.5%    0.4846   97.2%   0.003    0.049
+   alpha 0.0   random start     ( 48 it)           0.143     97.5%    0.4852   97.0%   0.004    0.048
+   alpha 5.0   hand-set start   ( 27 it)           0.049     97.6%    0.4800   98.0%   0.001    0.052
+   alpha 5.0   random start     ( 41 it)           0.049     97.6%    0.4800   98.0%   0.001    0.052
+   alpha 50.0  hand-set start   ( 18 it)           0.053     97.5%    0.4803   97.8%   0.002    0.052
+   alpha 50.0  random start     ( 26 it)           0.053     97.5%    0.4803   97.8%   0.002    0.052
+   PIPELINE: alpha by CV = 20.0 + 4 restarts       0.050     97.5%    0.4795   98.5%   0.001    0.052
+      distance between restarts: 0.0001
+
+How much data? (weak labels on 30%, alpha by CV, hand-set start)
+   n = 1000   (alpha 20.0)                         0.063     97.4%    0.4878   91.2%   0.010    0.052
+   n = 3000   (alpha 5.0)                          0.054     97.5%    0.4849   95.0%   0.006    0.049
+   n = 8000   (alpha 20.0)                         0.051     97.5%    0.4810   98.5%   0.001    0.068

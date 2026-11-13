@@ -1,0 +1,9 @@
+{
+  "llm": "Qwen/Qwen2.5-7B-Instruct-bfloat16",
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "spacy_model": "en_core_web_sm",
+  "kb": "/kaggle/working/project/kb_hybrid",
+  "kb_passages": 20142,
+  "passages_in_prompt": 3
+}

@@ -1,0 +1,9 @@
+# Bayesian Epistemic Routing - all open source, runs offline on CPU
+pgmpy>=1.0
+numpy
+spacy>=3.7            # then: python -m spacy download en_core_web_sm
+sentence-transformers>=3.0   # embedder + cross-encoder reranker (downloaded once, then offline)
+faiss-cpu             # optional: NumPy fallback is built in
+scikit-learn          # optional: KMeans for DomainShift topic centroids
+matplotlib            # only for plot_network.py
+requests  # build_kb.py: fetch Wikipedia intros (one-time, online)

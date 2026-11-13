@@ -1,0 +1,10 @@
+# Extra packages for the GPU machine that runs StripedHyena-Nous-7B (labelling).
+# Needs an NVIDIA GPU from the RTX 30-series (Ampere) or newer, ~16 GB VRAM in 16-bit,
+# and a CUDA toolkit matching your PyTorch build.
+#   pip install -r requirements.txt -r requirements-gpu.txt
+#   pip install flash-attn --no-build-isolation      # StripedHyena's code imports flash_attn
+torch
+transformers
+accelerate
+sentencepiece
+bitsandbytes          # only for --llm stripedhyena-4bit (trying an 8 GB card)
